@@ -1,0 +1,3 @@
+POST localhost:8080/auth Content-Type: "application/json"
+
+{"email":"<EMAIL>","password":"<PASSWORD>"}
