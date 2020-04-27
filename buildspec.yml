@@ -19,9 +19,9 @@ phases:
 
         - sudo apt update
 
-        # - pip3 install --upgrade pip
-        - pip3 install -r requirements.txt
-        - python3 test_main.py
+        - pip install --upgrade pip
+        - pip install --no-cache-dir -r requirements.txt
+        - python test_main.py
   build:
     commands:
       - docker build --tag $REPOSITORY_URI:$TAG .

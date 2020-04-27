@@ -1,8 +1,8 @@
-POST  http://localhost:80/auth HTTP/1.1
+POST  http://af03988a8889111ea84ad02806aa5347-1519357685.us-east-2.elb.amazonaws.com:80/auth HTTP/1.1
 content-type: application/json
 
 {"email":"kcemenike@live.com","password":"chucakfd"}
 
-GET http://localhost:80/contents HTTP/1.1
+GET http://af03988a8889111ea84ad02806aa5347-1519357685.us-east-2.elb.amazonaws.com:80/contents HTTP/1.1
 ontent-type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODkxNzY2NTMsIm5iZiI6MTU4Nzk2NzA1MywiZW1haWwiOiJrY2VtZW5pa2VAbGl2ZS5jb20ifQ._ZiPYUBcX4JzkJn1fLKMtWh7MXl0JIF5Ds3a4Dfp9P8
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODkyMDcwOTQsIm5iZiI6MTU4Nzk5NzQ5NCwiZW1haWwiOiJrY2VtZW5pa2VAbGl2ZS5jb20ifQ._YhET2KtaPae8XOtfCHAQroU9118GSCY1kswl6t42bc
