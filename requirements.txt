@@ -1,4 +1,5 @@
-pyjwt
+pyjwt==1.7.1
 flask
 gunicorn
 pytest
+python-dotenv
