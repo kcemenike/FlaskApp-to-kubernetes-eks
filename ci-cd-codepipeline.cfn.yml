@@ -1,11 +1,9 @@
 ---
 AWSTemplateFormatVersion: 2010-09-09
 
-Description: EKSWSV1
-
+Description: EKSWSV1 (aws cloudformation deploy --stack-name myFinalStack --template-file ci-cd-codepipeline.cfn.yml --capabilities CAPABILITY_IAM --parameter-overrides GitHubToken=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)
 
 Parameters:
-
   EksClusterName:
     Type: String
     Description: The name of the EKS cluster created
@@ -62,7 +60,6 @@ Parameters:
     MaxLength: 100
     ConstraintDescription: You must enter a kubectl IAM role
 
-
 Metadata:
   AWS::CloudFormation::Interface:
     ParameterGroups:
@@ -101,9 +98,7 @@ Metadata:
       EksClusterName:
         default: EKS cluster name
 
-
 Resources:
-
   EcrDockerRepository:
     Type: AWS::ECR::Repository
     DeletionPolicy: Retain
@@ -161,7 +156,7 @@ Resources:
 
       Handler: index.handler
       Role: !GetAtt CustomResourceLambdaExecutionRole.Arn
-      Runtime: python2.7
+      Runtime: python3.9
       Timeout: 300
 
   CustomResourceLambdaExecutionRole:
@@ -216,7 +211,7 @@ Resources:
           PolicyDocument:
             Version: 2012-10-17
             Statement:
-              - Resource: "*"
+              - Resource: '*'
                 Effect: Allow
                 Action:
                   - codebuild:StartBuild
